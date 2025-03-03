@@ -1,11 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { SiInstagram } from "react-icons/si";
-import { SiDiscord } from "react-icons/si";
-import { SiLinkedin } from "react-icons/si";
-import { SiGithub } from "react-icons/si";
-import { SiSpotify } from "react-icons/si";
+// import { SiInstagram } from "react-icons/si";
+// import { SiDiscord } from "react-icons/si";
+// import { SiLinkedin } from "react-icons/si";
+// import { SiGithub } from "react-icons/si";
+// import { SiSpotify } from "react-icons/si";
 
 import Link from 'next/link'
 
