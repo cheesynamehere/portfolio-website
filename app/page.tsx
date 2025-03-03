@@ -1,5 +1,6 @@
 "use client"
 
+import React from 'react';
 import { useState, useEffect } from 'react';
 import Webring from './components/Webring';
 
@@ -18,7 +19,7 @@ export default function Home() {
   const [vidBackground, setVidBackground] = useState(bgList[Math.floor(Math.random() * bgList.length)]);
 
   function changeBg() {
-    let nextBg = bgList[Math.floor(Math.random() * bgList.length)]
+    const nextBg = bgList[Math.floor(Math.random() * bgList.length)]
 
     if (nextBg == vidBackground)
       return changeBg()

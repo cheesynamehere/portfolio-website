@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { useEffect, useState } from 'react'
 // import { SiInstagram } from "react-icons/si";
 // import { SiDiscord } from "react-icons/si";
