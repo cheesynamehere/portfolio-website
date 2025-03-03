@@ -3,6 +3,14 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
+import { Kumbh_Sans } from 'next/font/google'
+
+const kumbhSans = Kumbh_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-kumbh-sans',
+})
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -28,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${kumbhSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
         {children}
