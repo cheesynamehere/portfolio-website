@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react'
 // import { SiLinkedin } from "react-icons/si";
 // import { SiGithub } from "react-icons/si";
 // import { SiSpotify } from "react-icons/si";
+import { FaHandPointRight } from "react-icons/fa6";
+import { FaHandPointLeft } from "react-icons/fa6";
 
 import Link from 'next/link'
 
@@ -74,11 +76,17 @@ export default function Webring({ title = 'you\'re viewing', current, url }: { t
                 <p className='hidden sm:block'>{title}</p>
                 <div className='flex flex-row flex-wrap gap-2 sm:gap-4 justify-center my-2 text-lg'>
                     <Link href={webringData.left.link} target='_blank'>
-                        <p className='w-44 py-1 bg-neutral-800 rounded-lg border-neutral-600 active:border-white border-[1px] active:scale-95 hover:bg-white hover:text-black transition-all'>{webringData.left.name}</p>
+                    <div className='relative flex items-center justify-center w-44 py-1 bg-neutral-800 rounded-lg border-neutral-600 active:border-white border-[1px] active:scale-95 hover:bg-[#295a22] transition-all'>
+                    <FaHandPointLeft className='absolute w-4 h-4 left-2' />
+                    <p>{webringData.left.name}</p>
+                    </div>
                     </Link>
                     <div className='hidden sm:block w-44 py-1 text-white pointer-events-none'>{current}</div>
                     <Link href={webringData.right.link} target='_blank'>
-                        <p className='w-44 py-1 bg-neutral-800 rounded-lg border-neutral-600 active:border-white border-[1px] active:scale-95 hover:bg-white hover:text-black transition-all'>{webringData.right.name}</p>
+                    <div className='relative flex items-center justify-center w-44 py-1 bg-neutral-800 rounded-lg border-neutral-600 active:border-white border-[1px] active:scale-95 hover:bg-[#295a22] transition-all'>
+                    <FaHandPointRight className='absolute w-4 h-4 right-2' />
+                    <p>{webringData.right.name} </p>
+                    </div>
                     </Link>
                 </div>
                 <div className='text-neutral-500'>Apart of the <span className='text-blue-400'><a href={url}>{webringData.name}</a></span> webring.</div>

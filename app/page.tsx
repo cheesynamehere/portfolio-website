@@ -51,7 +51,7 @@ export default function Home() {
         <button className="py-4 px-4 bg-[#E5D0AC] hover:bg-[#ad836a] rounded-xl" onClick={changeBg}>
           Change the Opening!
         </button>
-        <video className="absolute -z-10 opacity-5 w-screen h-screen object-cover" key={vidBackground} autoPlay muted loop disablePictureInPicture>
+        <video className="fixed -z-10 opacity-5 w-screen h-screen object-cover" key={vidBackground} preload="metadata" playsInline autoPlay muted loop disablePictureInPicture>
           <source src={vidBackground} type="video/mp4"></source>
         </video>
       </div>
