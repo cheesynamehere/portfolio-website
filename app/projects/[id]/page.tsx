@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import Webring from '@/app/components/Webring'
 
-export default async function ProjectDetails({ params }: {params: {id: string}}) {
+export default async function ProjectDetails({ params }: {params: Promise<{id: string}>} ) {
     const { id } = await params
 
     let foundProject
