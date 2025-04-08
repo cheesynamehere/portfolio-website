@@ -2,7 +2,7 @@ import Image from 'next/image'
 import projects from '../dispositions/projects'
 import React from 'react'
 
-function CarouselCard({ title, tagline, image, id }) {
+function CarouselCard({ title, tagline, image, id }: { title: string, tagline: string, image: string, id: string}) {
 
     return (
         <div className='relative w-[25%] h-full bg-neutral-600'>

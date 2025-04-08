@@ -3,7 +3,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import Webring from './components/Webring'
-import { motion } from "motion/react"
+// import { motion } from "motion/react"
 import { Carousel } from "./components/Carousel"
 
 
@@ -58,7 +58,7 @@ export default function Home() {
         </video>
       </div>
       <div className="h-screen">
-        <Carousel> </Carousel>
+        <Carousel />
       </div>
 
       <Webring url="https://raw.githubusercontent.com/Google-Developer-Groups-Skyline-College/clubwebring/refs/heads/master/webring.json" title="" current="jarred"></Webring>
