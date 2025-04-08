@@ -3,8 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import Webring from '@/app/components/Webring'
 
-export default async function ProjectDetails({ params }) {
-
+export default async function ProjectDetails({ params }: {params: {id: string}}) {
     const { id } = await params
 
     let foundProject
@@ -18,7 +17,7 @@ export default async function ProjectDetails({ params }) {
     return (
         <div className="">
             <div className="flex flex-col pt-14 px-4 justify-start text-black h-screen">
-                <Image src={foundProject?.image} alt='' className='object-cover w-64 h-64 p-1 bg-orange-300' width={300} height={300} />
+                <Image src={foundProject ? foundProject.image : ''} alt='' className='object-cover w-64 h-64 p-1 bg-orange-300' width={300} height={300} />
                 <p>{foundProject?.title}</p>
                 <p>{foundProject?.tagline}</p>
             </div>
